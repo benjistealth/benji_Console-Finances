@@ -90,7 +90,7 @@ var finances = [
 //Total Number of Months
 var months = 0;
 months = finances.length;
-console.log("Number of months in dataset = " + months);
+console.log("Total Months: " + months);
 
 //Total value of all Months in data set
 var total = 0;
@@ -119,8 +119,25 @@ console.log("Average monthly change :  $" + averageChange);
 
 //Greatest increase in profits
 //find the largest positive number in the changes array 1926159
+//need to get the dates out for these records
 //got the below from Stack Overflow, but had already learned about it in Mozilla docs
 var largestIncrease = Math.max.apply(0, changes);
 
-console.log("Greatest Increase in Profits: " + largestIncrease);
+console.log("Greatest Increase in Profits: $" + largestIncrease);
+var increaseDate = "";
+
+for (var i = 0; i < finances.length; i++){
+    if(finances[i][1] === 1926159){
+        increaseDate = finances[i][0];
+        console.log(finances[i][0]);
+    }
+}
+console.log("Date = " + increaseDate);
+
+//greatest decrease in loses
+//largest negative number in the changes array -2196167
+
+var largestDecrease = Math.min.apply(0, changes);
+
+console.log("Greatest Decrease in Profits: £" + largestDecrease);
 
