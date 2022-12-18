@@ -97,14 +97,14 @@ var total = 0;
 for(var i=0; i< finances.length; i++){
     total = total + finances[i][1];
 }
-console.log("Total value of all months = " +  total);
+console.log("Total value of all months =  $" +  total);
 
 //Average of "changes" in profilt / loss
-var change = finances[0][1];
+var change = 0;
 var changes = [];
 for(let i = 1; i < (finances.length); i++){
     
-    change = ((finances[i][1]) - change);
+    change = ((finances[i][1]) - finances[i-1][1]);
     changes.push(change);
 }
 //calculate the total of the changes array
@@ -115,5 +115,13 @@ for(var i = 0; i < changes.length; i++){
     totalChanges = totalChanges + changes[i];
 }
 averageChange = totalChanges / changes.length;
-console.log("Average monthly change : " + averageChange);
+console.log("Average monthly change :  $" + averageChange);
 
+//Greatest increase in profits
+//find the largest positive number in the changes array 1926159
+
+var largestIncrease = 0;
+changes.sort();
+largestIncrease = changes[changes.length-1];
+
+console.log("Greatest Increase in Profits: " + largestIncrease);
