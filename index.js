@@ -119,9 +119,8 @@ console.log("Average monthly change :  $" + averageChange);
 
 //Greatest increase in profits
 //find the largest positive number in the changes array 1926159
-
-var largestIncrease = 0;
-changes.sort();
-largestIncrease = changes[changes.length-1];
+//got the below from Stack Overflow, but had already learned about it in Mozilla docs
+var largestIncrease = Math.max.apply(0, changes);
 
 console.log("Greatest Increase in Profits: " + largestIncrease);
+
