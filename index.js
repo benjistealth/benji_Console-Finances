@@ -90,14 +90,14 @@ var finances = [
 //Total Number of Months
 var months = 0;
 months = finances.length;
-console.log("Total Months: " + months);
+
 
 //Total value of all Months in data set
 var total = 0;
 for(var i=0; i< finances.length; i++){
     total = total + finances[i][1];
 }
-console.log("Total value of all months =  $" +  total);
+
 
 //Average of "changes" in profilt / loss
 var change = 0;
@@ -115,7 +115,8 @@ for(var i = 0; i < changes.length; i++){
     totalChanges = totalChanges + changes[i];
 }
 averageChange = totalChanges / changes.length;
-console.log("Average monthly change :  $" + averageChange);
+//make averageChange to 2 decimal places - thanks Stack Overflow :-)
+averageChange = averageChange.toFixed(2);
 
 //Greatest increase in profits
 //find the largest positive number in the changes array 1926159
@@ -123,7 +124,7 @@ console.log("Average monthly change :  $" + averageChange);
 //got the below from Stack Overflow, but had already learned about it in Mozilla docs
 var largestIncrease = Math.max.apply(0, changes);
 
-console.log("Greatest Increase in Profits: $" + largestIncrease);
+
 
 
 //find the month where the largest increase happened
@@ -134,11 +135,8 @@ var increaseDate = "";
 for (var i = 0; i < changes.length; i++){
     if(changes[i] === 1926159){
         increaseDate = finances[i+1][0];
-        console.log(finances[i+1][0]);
     }
 }
-console.log("Date = " + increaseDate);
-
 //greatest decrease in loses
 //largest negative number in the changes array -2196167
 
@@ -151,9 +149,15 @@ var decreaseDate = "";
 for (var i = 0; i < changes.length; i++){
     if(changes[i] === -2196167){
         decreaseDate = finances[i+1][0];
-        console.log(finances[i+1][0]);
     }
 }
-console.log("Greatest Decrease in Profits: £" + largestDecrease);
 
-//Tidy up console output 
+
+//Tidy up console output
+console.log("Financial Analysis");
+console.log("----------------------------");
+console.log("Total Months: " + months);
+console.log("Total: $" +  total);
+console.log("Average  Change: $" + averageChange);
+console.log("Greatest Increase in Profits: " + increaseDate + " ($" + largestIncrease + ")");
+console.log("Greatest Decrease in Profits: " + decreaseDate + " ($" + largestDecrease + ")");
