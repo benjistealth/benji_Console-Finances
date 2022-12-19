@@ -124,6 +124,11 @@ console.log("Average monthly change :  $" + averageChange);
 var largestIncrease = Math.max.apply(0, changes);
 
 console.log("Greatest Increase in Profits: $" + largestIncrease);
+
+
+//find the month where the largest increase happened
+//using the changes array to find the Nth element +1 as we need to include the last value
+
 var increaseDate = "";
 
 for (var i = 0; i < changes.length; i++){
@@ -139,6 +144,8 @@ console.log("Date = " + increaseDate);
 
 var largestDecrease = Math.min.apply(0, changes);
 
+//finding month where largest negative happens and put date into var
+
 var decreaseDate = "";
 
 for (var i = 0; i < changes.length; i++){
@@ -149,3 +156,4 @@ for (var i = 0; i < changes.length; i++){
 }
 console.log("Greatest Decrease in Profits: £" + largestDecrease);
 
+//Tidy up console output 
