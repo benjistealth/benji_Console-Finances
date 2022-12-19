@@ -1,12 +1,11 @@
-# javascript_financial_analysis
-A webpage that displays some information in the console derived from some financial data.
+# benji_Console-Finances
+
+A webpage that displays information in the console derived from financial data.
 
 ## Description
 
-- This is the challenge at the end of module 3 of the EDX Front End Bootcamp
-- To create a portfolio page to showcase any projects we have created
-- Utilising Bootstrap, HTML & CSS
-- Incorporates any work completed so far as content, using images as placeholders for future work
+- A simple webpage to display some information in the console
+- Information derived from a financial dataset provided
 
 ## Screenshot of top of page of deployed application
 
@@ -14,7 +13,7 @@ A webpage that displays some information in the console derived from some financ
   <img alt="Screenshot_1" src="assets\images\screenshot1.png">
 
 
-## Screenshot of middle of page of deployed application
+## Screenshot of console of deployed application
 
 
   <img alt="Screenshot_2" src="assets\images\screenshot2.png">
@@ -24,13 +23,13 @@ A webpage that displays some information in the console derived from some financ
 
 NA - Website hosted on Github Pages
 
-https://benjistealth.github.io/benji_bootstrap_portfolio/
+https://benjistealth.github.io/benji_Console-Finances
 
 ## Usage
 
 - Visit the page on Github pages to view my portfolio and click through to any past projects
 
-https://benjistealth.github.io/benji_bootstrap_portfolio/
+https://benjistealth.github.io/benji_Console-Finances
 
 ## Credits
 
@@ -47,7 +46,7 @@ NA
 
 ## Features
 
-HTML, CSS, Bootstrap
+HTML, CSS, Javascript
 
 ## How to Contribute
 
@@ -55,4 +54,4 @@ NA
 
 ## Tests
 
-Manual - Exploratory
+Manual - Numerical accuracy checked with MS Excel
