@@ -27,13 +27,13 @@ https://benjistealth.github.io/benji_Console-Finances
 
 ## Usage
 
-- Visit the page on Github pages to view my portfolio and click through to any past projects
+- Visit the page on Github pages, press F12 to open the console and see the financial info
 
 https://benjistealth.github.io/benji_Console-Finances
 
 ## Credits
 
-NA
+Some credit to Mozilla Developer Network and Stack Overflow for some help with Javascript functions
 
 ## License
 
