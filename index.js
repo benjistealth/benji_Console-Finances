@@ -1,5 +1,5 @@
 var finances = [
-['Jan-2010', 867884], // finances[1] = ['Feb-2010', 984655] --> finances[1][1] --> 867884
+['Jan-2010', 867884], // finances[1] = ['Feb-2010', 984655] --> finances[1][1] --> 984655
 ['Feb-2010', 984655],
 ['Mar-2010', 322013],
 ['Apr-2010', -69417],
@@ -90,21 +90,21 @@ var finances = [
 //Total Number of Months
 var months = 0;
 months = finances.length;
-console.log("Number of months in dataset = " + months);
+console.log("Total Months: " + months);
 
 //Total value of all Months in data set
 var total = 0;
 for(var i=0; i< finances.length; i++){
     total = total + finances[i][1];
 }
-console.log("Total value of all months = " +  total);
+console.log("Total value of all months =  $" +  total);
 
 //Average of "changes" in profilt / loss
-var change = finances[0][1];
+var change = 0;
 var changes = [];
 for(let i = 1; i < (finances.length); i++){
     
-    change = ((finances[i][1]) - change);
+    change = ((finances[i][1]) - finances[i-1][1]);
     changes.push(change);
 }
 //calculate the total of the changes array
@@ -115,5 +115,45 @@ for(var i = 0; i < changes.length; i++){
     totalChanges = totalChanges + changes[i];
 }
 averageChange = totalChanges / changes.length;
-console.log("Average monthly change : " + averageChange);
+console.log("Average monthly change :  $" + averageChange);
 
+//Greatest increase in profits
+//find the largest positive number in the changes array 1926159
+//need to get the dates out for these records
+//got the below from Stack Overflow, but had already learned about it in Mozilla docs
+var largestIncrease = Math.max.apply(0, changes);
+
+console.log("Greatest Increase in Profits: $" + largestIncrease);
+
+
+//find the month where the largest increase happened
+//using the changes array to find the Nth element +1 as we need to include the last value
+
+var increaseDate = "";
+
+for (var i = 0; i < changes.length; i++){
+    if(changes[i] === 1926159){
+        increaseDate = finances[i+1][0];
+        console.log(finances[i+1][0]);
+    }
+}
+console.log("Date = " + increaseDate);
+
+//greatest decrease in loses
+//largest negative number in the changes array -2196167
+
+var largestDecrease = Math.min.apply(0, changes);
+
+//finding month where largest negative happens and put date into var
+
+var decreaseDate = "";
+
+for (var i = 0; i < changes.length; i++){
+    if(changes[i] === -2196167){
+        decreaseDate = finances[i+1][0];
+        console.log(finances[i+1][0]);
+    }
+}
+console.log("Greatest Decrease in Profits: £" + largestDecrease);
+
+//Tidy up console output 
