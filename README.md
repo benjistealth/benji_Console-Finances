@@ -10,13 +10,13 @@ A webpage that displays information in the console derived from financial data.
 ## Screenshot of top of page of deployed application
 
     
-  <img alt="Screenshot_1" src="assets\images\screenshot1.png">
+  <img alt="Screenshot_1" src="assets\images\screenshot2.png">
 
 
 ## Screenshot of console of deployed application
 
 
-  <img alt="Screenshot_2" src="assets\images\screenshot2.png">
+  <img alt="Screenshot_2" src="assets\images\screenshot1.png">
 
 
 ## Installation
