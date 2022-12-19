@@ -1,5 +1,5 @@
 var finances = [
-['Jan-2010', 867884], // finances[1] = ['Feb-2010', 984655] --> finances[1][1] --> 867884
+['Jan-2010', 867884], // finances[1] = ['Feb-2010', 984655] --> finances[1][1] --> 984655
 ['Feb-2010', 984655],
 ['Mar-2010', 322013],
 ['Apr-2010', -69417],
@@ -126,10 +126,10 @@ var largestIncrease = Math.max.apply(0, changes);
 console.log("Greatest Increase in Profits: $" + largestIncrease);
 var increaseDate = "";
 
-for (var i = 0; i < finances.length; i++){
-    if(finances[i][1] === 1926159){
-        increaseDate = finances[i][0];
-        console.log(finances[i][0]);
+for (var i = 0; i < changes.length; i++){
+    if(changes[i] === 1926159){
+        increaseDate = finances[i+1][0];
+        console.log(finances[i+1][0]);
     }
 }
 console.log("Date = " + increaseDate);
@@ -139,5 +139,13 @@ console.log("Date = " + increaseDate);
 
 var largestDecrease = Math.min.apply(0, changes);
 
+var decreaseDate = "";
+
+for (var i = 0; i < changes.length; i++){
+    if(changes[i] === -2196167){
+        decreaseDate = finances[i+1][0];
+        console.log(finances[i+1][0]);
+    }
+}
 console.log("Greatest Decrease in Profits: £" + largestDecrease);
 
