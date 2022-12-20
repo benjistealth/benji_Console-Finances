@@ -91,14 +91,11 @@ var finances = [
 var months = 0;
 months = finances.length;
 
-
 //Total value of all Months in data set
 var total = 0;
 for(var i=0; i< finances.length; i++){
     total = total + finances[i][1];
 }
-
-
 //Average of "changes" in profilt / loss
 var change = 0;
 var changes = [];
@@ -124,9 +121,6 @@ averageChange = averageChange.toFixed(2);
 //got the below from Stack Overflow, but had already learned about it in Mozilla docs
 var largestIncrease = Math.max.apply(0, changes);
 
-
-
-
 //find the month where the largest increase happened
 //using the changes array to find the Nth element +1 as we need to include the last value
 
@@ -137,6 +131,7 @@ for (var i = 0; i < changes.length; i++){
         increaseDate = finances[i+1][0];
     }
 }
+
 //greatest decrease in loses
 //largest negative number in the changes array -2196167
 
@@ -152,8 +147,7 @@ for (var i = 0; i < changes.length; i++){
     }
 }
 
-
-//Tidy up console output
+//Tidy up console output to meet spec
 console.log("Financial Analysis");
 console.log("----------------------------");
 console.log("Total Months: " + months);
@@ -161,3 +155,27 @@ console.log("Total: $" +  total);
 console.log("Average  Change: $" + averageChange);
 console.log("Greatest Increase in Profits: " + increaseDate + " ($" + largestIncrease + ")");
 console.log("Greatest Decrease in Profits: " + decreaseDate + " ($" + largestDecrease + ")");
+console.log("bananas");
+
+//Experimental placing data onto webpage using JS
+
+document.body.onload = addElement;
+
+function addElement() {
+  // create a new div element
+  const newDiv = document.createElement("div");
+
+    newDiv.classList.add("someText");
+
+  // and give it some content
+  const newContent = document.createTextNode("Hi there and greetings!");
+
+  // add the text node to the newly created div
+  newDiv.appendChild(newContent);
+
+  // add the newly created element and its content into the DOM
+  const currentDiv = document.getElementById("target");
+//   document.body.insertBefore(newDiv, currentDiv);
+    currentDiv.appendChild(newDiv);
+
+}
