@@ -1,0 +1,34 @@
+* {
+    background-color:slategray;
+    
+}
+
+
+
+
+
+.data-output {
+    position:relative;
+    margin-top: 10vh;
+    margin-left: 30vw;
+    font-size: larger;
+    font-style: bold;
+    font-family: 'Abel';
+    font-size: 30pt;
+}
+/* make the separate lines italic on hover */
+.data-output #total-months:hover {
+    font-style:italic;
+}
+.data-output #total-value:hover {
+    font-style: italic;
+}
+.data-output #average-change:hover {
+    font-style: italic;
+}
+.data-output #greatest-increase:hover {
+    font-style: italic;
+}
+.data-output #greatest-decrease:hover {
+    font-style: italic;
+}
