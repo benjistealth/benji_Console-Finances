@@ -3,12 +3,12 @@ var finances = [
 ['Feb-2010', 984655],
 ['Mar-2010', 322013],
 ['Apr-2010', -69417],
-['May-2010', 310503],
+['May-2010', 310503],   // finances [0] = ['Jan-2010', 867884];
 ['Jun-2010', 522857],
-['Jul-2010', 1033096],
+['Jul-2010', 1033096],   // finances [0][1] = 867884;  // get the numbers out
 ['Aug-2010', 604885],
-['Sep-2010', -216386],
-['Oct-2010', 477532],
+['Sep-2010', -216386],  // finances[0][0] = 'Jan-2010';  // get the dates out
+['Oct-2010', 477532],   // 
 ['Nov-2010', 893810],
 ['Dec-2010', -80353],
 ['Jan-2011', 779806],
@@ -111,6 +111,7 @@ var averageChange = 0;
 for(var i = 0; i < changes.length; i++){
     totalChanges = totalChanges + changes[i];
 }
+
 averageChange = totalChanges / changes.length;
 //make averageChange to 2 decimal places - thanks Stack Overflow :-)
 averageChange = averageChange.toFixed(2);
@@ -155,27 +156,20 @@ console.log("Total: $" +  total);
 console.log("Average  Change: $" + averageChange);
 console.log("Greatest Increase in Profits: " + increaseDate + " ($" + largestIncrease + ")");
 console.log("Greatest Decrease in Profits: " + decreaseDate + " ($" + largestDecrease + ")");
-console.log("bananas");
 
 //Experimental placing data onto webpage using JS
 
-document.body.onload = addElement;
 
-function addElement() {
-  // create a new div element
-  const newDiv = document.createElement("div");
-
-    newDiv.classList.add("someText");
 
   // and give it some content
-  const newContent = document.createTextNode("Hi there and greetings!");
+  document.getElementById("heading").innerHTML = "Financial Analysis";
+  document.getElementById("total-months").innerHTML = "Total Months: " + months;
+  document.getElementById("total-value").innerHTML = "Total: $" +  total;
+  document.getElementById("average-change").innerHTML = "Average  Change: $" + averageChange;
+  document.getElementById("greatest-increase").innerHTML = "Greatest Increase in Profits: " + increaseDate + " ($" + largestIncrease + ")";
+  document.getElementById("greatest-decrease").innerHTML = "Greatest Decrease in Profits: " + decreaseDate + " ($" + largestDecrease + ")";
 
-  // add the text node to the newly created div
-  newDiv.appendChild(newContent);
-
-  // add the newly created element and its content into the DOM
-  const currentDiv = document.getElementById("target");
-//   document.body.insertBefore(newDiv, currentDiv);
-    currentDiv.appendChild(newDiv);
-
-}
+//const screenOutput = [screenHeading, screenMonths, screenTotal, screenAverage, screenIncrease, screenDecrease];
+//console.log(screenOutput);
+// for(let i=0;i<screenOutput.length;i++){
+    
