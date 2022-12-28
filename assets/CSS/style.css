@@ -16,20 +16,25 @@
 /* make the separate lines italic on hover */
 .data-output #total-months:hover {
     font-style: italic;
+    color: purple;
 }
 
 .data-output #total-value:hover {
     font-style: italic;
+    color: purple;
 }
 
 .data-output #average-change:hover {
     font-style: italic;
+    color: purple;
 }
 
 .data-output #greatest-increase:hover {
     font-style: italic;
+    color: purple;
 }
 
 .data-output #greatest-decrease:hover {
     font-style: italic;
+    color: purple;
 }

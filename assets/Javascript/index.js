@@ -157,9 +157,7 @@ console.log("Average  Change: $" + averageChange);
 console.log("Greatest Increase in Profits: " + increaseDate + " ($" + largestIncrease + ")");
 console.log("Greatest Decrease in Profits: " + decreaseDate + " ($" + largestDecrease + ")");
 
-//Experimental placing data onto webpage using JS
-
-
+//Experimental placing data onto webpage using JS (basic method directly using data above)
 
 // add some content to newly created elements
 document.getElementById("heading").innerHTML = "Financial Analysis";
