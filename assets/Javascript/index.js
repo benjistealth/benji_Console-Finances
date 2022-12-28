@@ -3,12 +3,12 @@ var finances = [
 ['Feb-2010', 984655],
 ['Mar-2010', 322013],
 ['Apr-2010', -69417],
-['May-2010', 310503],
+['May-2010', 310503],   // finances [0] = ['Jan-2010', 867884];
 ['Jun-2010', 522857],
-['Jul-2010', 1033096],
+['Jul-2010', 1033096],   // finances [0][1] = 867884;  // get the number out
 ['Aug-2010', 604885],
-['Sep-2010', -216386],
-['Oct-2010', 477532],
+['Sep-2010', -216386],  // finances[0][0] = 'Jan-2010';  // get the dates out
+['Oct-2010', 477532],  
 ['Nov-2010', 893810],
 ['Dec-2010', -80353],
 ['Jan-2011', 779806],
@@ -91,14 +91,11 @@ var finances = [
 var months = 0;
 months = finances.length;
 
-
 //Total value of all Months in data set
 var total = 0;
 for(var i=0; i< finances.length; i++){
     total = total + finances[i][1];
 }
-
-
 //Average of "changes" in profilt / loss
 var change = 0;
 var changes = [];
@@ -114,6 +111,7 @@ var averageChange = 0;
 for(var i = 0; i < changes.length; i++){
     totalChanges = totalChanges + changes[i];
 }
+
 averageChange = totalChanges / changes.length;
 //make averageChange to 2 decimal places - thanks Stack Overflow :-)
 averageChange = averageChange.toFixed(2);
@@ -123,9 +121,6 @@ averageChange = averageChange.toFixed(2);
 //need to get the dates out for these records
 //got the below from Stack Overflow, but had already learned about it in Mozilla docs
 var largestIncrease = Math.max.apply(0, changes);
-
-
-
 
 //find the month where the largest increase happened
 //using the changes array to find the Nth element +1 as we need to include the last value
@@ -137,6 +132,7 @@ for (var i = 0; i < changes.length; i++){
         increaseDate = finances[i+1][0];
     }
 }
+
 //greatest decrease in loses
 //largest negative number in the changes array -2196167
 
@@ -152,8 +148,7 @@ for (var i = 0; i < changes.length; i++){
     }
 }
 
-
-//Tidy up console output
+//Tidy up console output to meet spec
 console.log("Financial Analysis");
 console.log("----------------------------");
 console.log("Total Months: " + months);
@@ -161,3 +156,15 @@ console.log("Total: $" +  total);
 console.log("Average  Change: $" + averageChange);
 console.log("Greatest Increase in Profits: " + increaseDate + " ($" + largestIncrease + ")");
 console.log("Greatest Decrease in Profits: " + decreaseDate + " ($" + largestDecrease + ")");
+
+//Experimental placing data onto webpage using JS
+
+
+
+  // add some content to newly created elements
+  document.getElementById("heading").innerHTML = "Financial Analysis";
+  document.getElementById("total-months").innerHTML = "Total Months: " + months;
+  document.getElementById("total-value").innerHTML = "Total: $" +  total;
+  document.getElementById("average-change").innerHTML = "Average  Change: $" + averageChange;
+  document.getElementById("greatest-increase").innerHTML = "Greatest Increase in Profits: " + increaseDate + " ($" + largestIncrease + ")";
+  document.getElementById("greatest-decrease").innerHTML = "Greatest Decrease in Profits: " + decreaseDate + " ($" + largestDecrease + ")";
