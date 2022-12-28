@@ -16,6 +16,7 @@
     font-family: 'Abel';
     font-size: 30pt;
 }
+
 /* make the separate lines italic on hover */
 .data-output #total-months:hover {
     font-style:italic;
