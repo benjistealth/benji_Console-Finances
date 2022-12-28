@@ -5,10 +5,10 @@ var finances = [
 ['Apr-2010', -69417],
 ['May-2010', 310503],   // finances [0] = ['Jan-2010', 867884];
 ['Jun-2010', 522857],
-['Jul-2010', 1033096],   // finances [0][1] = 867884;  // get the numbers out
+['Jul-2010', 1033096],   // finances [0][1] = 867884;  // get the number out
 ['Aug-2010', 604885],
 ['Sep-2010', -216386],  // finances[0][0] = 'Jan-2010';  // get the dates out
-['Oct-2010', 477532],   // 
+['Oct-2010', 477532],  
 ['Nov-2010', 893810],
 ['Dec-2010', -80353],
 ['Jan-2011', 779806],
@@ -161,15 +161,10 @@ console.log("Greatest Decrease in Profits: " + decreaseDate + " ($" + largestDec
 
 
 
-  // and give it some content
+  // add some content to newly created elements
   document.getElementById("heading").innerHTML = "Financial Analysis";
   document.getElementById("total-months").innerHTML = "Total Months: " + months;
   document.getElementById("total-value").innerHTML = "Total: $" +  total;
   document.getElementById("average-change").innerHTML = "Average  Change: $" + averageChange;
   document.getElementById("greatest-increase").innerHTML = "Greatest Increase in Profits: " + increaseDate + " ($" + largestIncrease + ")";
   document.getElementById("greatest-decrease").innerHTML = "Greatest Decrease in Profits: " + decreaseDate + " ($" + largestDecrease + ")";
-
-//const screenOutput = [screenHeading, screenMonths, screenTotal, screenAverage, screenIncrease, screenDecrease];
-//console.log(screenOutput);
-// for(let i=0;i<screenOutput.length;i++){
-    
